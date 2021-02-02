@@ -8,7 +8,7 @@ app.use(fileUpload());
 // Upload Endpoint
 app.post('/upload', (req, res) => {
   if (req.files === null) {
-    return res.status(400).json({ msg: 'no file upload' });
+    return res.status(400).json({ msg: 'No file upload.' });
   }
 
   const file = req.files.file;
@@ -23,4 +23,4 @@ app.post('/upload', (req, res) => {
   });
 });
 
-app.listen(5000, () => console.log('server started'));
+app.listen(5000, () => console.log('Server Started'));
