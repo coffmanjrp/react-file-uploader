@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { Message } from './';
+import { Message, Progress } from './';
 
 const FileUpload = () => {
   const [file, setFile] = useState('');
@@ -60,6 +60,7 @@ const FileUpload = () => {
             id="customFile"
             onChange={onChange}
           />
+          <Progress percentage={uploadPercentage} />
           <label className="custom-file-label" htmlFor="customFile">
             {fileName}
           </label>
