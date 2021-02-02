@@ -20,6 +20,8 @@ const FileUpload = () => {
     const formData = new FormData();
     formData.append('file', file);
 
+    setTimeout(() => setMessage(''), 5000);
+
     try {
       const res = await axios.post('/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
