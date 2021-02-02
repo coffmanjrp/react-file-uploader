@@ -1,5 +1,4 @@
 import { FileUpload } from './components';
-import './App.css';
 
 function App() {
   return (
